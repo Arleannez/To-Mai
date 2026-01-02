@@ -1,0 +1,84 @@
+body {
+    font-family: 'Segoe UI';
+    background: linear-gradient(135deg, #2c0808, #1a1652);
+    color: #f8f8f8;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Password Page Styles */
+.password-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+ background: linear-gradient(135deg, #2c0808, #1a1652);
+    padding: 2rem;
+}
+
+.password-title {
+      font-family: 'Segoe UI';
+    font-size: 2.5rem;
+    color: #ff69b4;
+    text-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#password-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(255, 182, 193, 0.3);
+    border: 2px solid #ffb6c1;
+    max-width: 400px;
+    width: 100%;
+}
+
+#password-input {
+    padding: 0.75rem;
+    border: 2px solid #ffb6c1;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: rgba(255, 255, 255, 0.9);
+    color: #2a2a2a;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#password-input:focus {
+    outline: none;
+    border-color: #ff69b4;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+}
+
+.password-btn {
+    padding: 0.75rem 2rem;
+    background: #ff69b4;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 105, 180, 0.5);
+}
+
+.password-btn:hover {
+    background: #ffb6c1;
+    transform: scale(1.05);
+}
+
+#error-message {
+    margin-top: 1rem;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 1rem;
+    text-align: center;
+}

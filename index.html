@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Password</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="password-container">
+        <h1 class="password-title">Enter Password</h1>
+        <h4 class="password-subtitle">Format: Month/Date/Year
+            <br><br>
+           <center>Ex.: 01/01/2024</center>
+        </h4>
+        <form id="password-form">
+            <input type="password" id="password-input" placeholder="Enter password" required>
+            <button type="submit" class="password-btn">Enter</button>
+        </form>
+        <p id="error-message" style="color: #593ebb; display: none;">Incorrect password. Please try again.</p>
+    </div>
+
+    <script>
+        document.getElementById('password-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const password = document.getElementById('password-input').value;
+            const correctPassword = '12/06/2025';
+            if (password === correctPassword) {
+                window.location.href = 'Home.html';
+            } else {
+                document.getElementById('error-message').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

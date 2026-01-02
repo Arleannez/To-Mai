@@ -1,0 +1,457 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width:thin;
+    scrollbar-color: #ff69b4 #1a1652;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI';
+    background: linear-gradient(135deg, #2c0808, #1a1652);
+    color: #f8f8f8;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(46, 6, 12, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #ffe2e2;
+    margin-left: 1rem;
+}
+
+#nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav li {
+    margin: 0 1rem;
+}
+
+.nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.nav a:hover {
+    color: #721242;
+}
+
+/* Banner */
+.Banner {
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    background: url('./Images/Pantalan Clouds.jpg') center/cover no-repeat;
+    z-index: 1;
+}
+
+.Banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 182, 193, 0.3);
+    z-index: 2;
+}
+
+#Banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 3;
+    box-shadow: 0 4px 20px rgba(255, 182, 193, 0.5);
+}
+
+/* Section 1 */
+.Section-1 {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.Title-About {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #97b8ff;
+
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.column {
+    flex: 1;
+    min-width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(255, 182, 193, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #ffb6c1;
+        position: relative;
+}
+
+.column:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 30px rgba(255, 182, 193, 0.5);
+}
+
+.line-1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+/* Typewriter Animation */
+.anim-typewriter {
+    overflow: hidden;
+    border-right: 0.15em solid #ff69b4;
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #ff69b4; }
+}
+
+.Paragraph {
+    color: #e0e0e0;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* Section 2 - Music */
+.Section-2 {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.music-player {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(255, 182, 193, 0.3);
+    border: 2px solid #ffb6c1;
+    text-align: center;
+}
+
+.music-info {
+    margin-bottom: 2rem;
+}
+
+.song-title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #ff69b4;
+    text-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+}
+
+.artist {
+    color: #e0e0e0;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.control-btn {
+    background: #ff69b4;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 105, 180, 0.5);
+}
+
+.control-btn:hover {
+    background: #ffb6c1;
+    transform: scale(1.1);
+}
+
+.progress-container {
+    width: 100%;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #ff69b4;
+    border-radius: 5px;
+    width: 0%;
+    transition: width 0.1s ease;
+}
+
+.time-display {
+    color: #e0e0e0;
+    font-size: 0.9rem;
+}
+
+/* Back to Top Button */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ff69b4;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(255, 105, 180, 0.5);
+}
+
+#backToTop:hover {
+    background: #ffb6c1;
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .burger {
+        display: block;
+    }
+
+    #nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(255, 182, 193, 0.9);
+        flex-direction: column;
+        padding: 1rem 0;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+
+    #nav-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav li {
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+
+    .Title-About {
+        font-size: 2rem;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .column {
+        padding: 1.5rem;
+    }
+
+    .line-1 {
+        font-size: 1.5rem;
+    }
+
+    .Paragraph {
+        font-size: 0.9rem;
+    }
+
+    .Section-1 {
+        padding: 2rem 1rem;
+    }
+
+    .Section-2 {
+        padding: 2rem 1rem;
+    }
+
+    .music-player {
+        padding: 1.5rem;
+    }
+
+    .song-title {
+        font-size: 1.8rem;
+    }
+
+    .control-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .Title-About {
+        font-size: 1.8rem;
+    }
+
+    .line-1 {
+        font-size: 1.3rem;
+    }
+
+    .Paragraph {
+        font-size: 0.85rem;
+    }
+
+    .song-title {
+        font-size: 1.5rem;
+    }
+
+    .control-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+}
+
+
+/* Click-to-reveal ONLY for the letter column */
+.hidden-blurred {
+    filter: blur(6px);
+    cursor: pointer;
+    transition: filter 0.6s ease;
+    position: relative;
+}
+
+/* Overlay text */
+.hidden-blurred::after {
+    content: "Click to reveal 💌";
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffd6e7;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+/* Revealed state */
+.hidden-blurred.revealed {
+    filter: blur(0);
+    cursor: default;
+}
+
+/* Remove overlay after reveal */
+.hidden-blurred.revealed::after {
+    opacity: 0;
+}
+
+/* Photo reveal styling */
+.photo-section {
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    margin: 20px auto; /* centers horizontally and adds spacing on top/bottom */
+    color: #d147a3;
+    text-align: center;
+    cursor: pointer;
+    filter: blur(6px);
+    transition: filter 0.5s ease;
+    position: relative; /* needed for the overlay */
+}
+
+.photo-section img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.photo-section::after {
+    content: "Click to reveal 📸";
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffd6e7;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(2px);
+    border-radius: 15px;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.photo-section.revealed {
+    filter: blur(0);
+    cursor: default;
+}
+
+.photo-section.revealed::after {
+    opacity: 0;
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Mai</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://unpkg.com/jsmediatags@3.9.5/dist/jsmediatags.min.js"></script>
+  </head>
+  <body>
+    <nav class="nav" id="Home">
+      <div class="burger" id="burger">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul id="nav-menu">
+        <li>
+          <a href="#Home"><i class="fa fa-fw fa-home"></i>Home</a>
+        </li>
+        <li>
+          <a href="#About"
+            ><i class="fa fa-user-circle" aria-hidden="true"></i>About</a
+          >
+        </li>
+        <li>
+          <a href="#Music"
+            ><i class="fa fa-music" aria-hidden="true"></i>Music</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" style="display: none">
+      <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+    </button>
+    <!--Banner-->
+    <div class="Banner">
+      <img id="Banner" src="./Images/Pantalan Clouds.jpg" />
+    </div>
+
+    <!-- Music Section -->
+    <section class="Section-2" id="Music">
+      <h1 class="Title-About">Music</h1>
+      <div class="music-player">
+        <div class="music-info">
+          <h2 class="song-title">Last Night On Earth</h2>
+          <p class="artist">By: Green Day</p>
+        </div>
+        <audio id="audio-player" preload="metadata" autoplay>
+          <source
+            src="./Music/Green Day - Last Night On Earth (cover).mp3"
+            type="audio/mpeg"
+          />
+          Your browser does not support the audio element.
+        </audio>
+        <div class="controls">
+          <button id="play-pause" class="control-btn">
+            <i class="fas fa-play"></i>
+          </button>
+          <button id="stop" class="control-btn">
+            <i class="fas fa-stop"></i>
+          </button>
+        </div>
+        <div class="progress-container">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <div class="time-display">
+          <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+        </div>
+      </div>
+    </section>
+
+    <!--Paragraph Section-->
+    <section class="Section-1">
+      <h1 id="About" class="Title-About">What's this About?</h1>
+      <div class="row">
+        <div class="column hidden-blurred" id="reveal-column">
+          <h1 class="line-1 anim-typewriter">To My Dear Mai,</h1>
+          <p class="Paragraph">
+          My Love, 
+          One month with you and somehow, it already feels like my heart learned a
+            new rhythm. I never expected that in such a short time, someone
+            could mean this much to me, but here you are, quietly becoming one
+            of the best parts of my life. Thank you for choosing me, for
+            staying, and for letting me love you in my own imperfect ways.
+            You’ve seen my random thoughts, my moods, and my awkward moments and
+            yet you’re still here.
+            <br><br>
+            I think that alone deserves appreciation. This month wasn’t just about counting
+            days. It was about the moments in between the late talks, the
+            laughter that came out of nowhere, the way missing you made me
+            realize how deeply I care. 
+            <br><br>
+            You made ordinary days feel warmer and
+            waiting feel worth it. I appreciate the way you understand me, even
+            when I don’t explain myself well. The way you’re patient, gentle,
+            and honest with your feelings. Loving you feels safe, and that’s
+            something I don’t take lightly. You made me feel seen, valued, and
+            chosen and that means more to me than I can fully put into words.
+            Sometimes I catch myself smiling for no reason, then I realize… it’s
+            you. (so cheesy, I know, but it’s true)
+            <br><br>
+            You’ve become the thought that sneaks in when my mind is quiet,
+            the comfort I look for at the end of the day. If one month can feel
+            this deep, I can only imagine what more time with you will bring. I
+            won’t pretend everything will always be perfect, but I promise to
+            always be real with you, to grow with you, and to choose you even on
+            the days when things feel heavy. Thank you for being my partner, my
+            safe place, and my favorite person to think about. Happy one month
+            to us. We made it here together, and I wouldn’t want to be on this
+            journey with anyone else. Here’s to more love, more memories, more
+            laughter and maybe a little more missing each other in between.
+
+            <br><br>
+            Mai à, chỉ một tháng thôi nhưng em đã trở thành điều dịu 
+            dàng nhất trong tim anh. Cảm ơn em vì đã đến, vì đã ở lại, và vì đã cho anh
+            một lý do để mỉm cười mỗi ngày. Anh mong được nắm tay em và cùng em đi thật xa, 
+            từng ngày một. (had a little help with google on this one hehe).
+            <br><br>
+            Always and only yours, 
+            <br><br>
+            <h3><b>Lea / An</b></h3>
+          </p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Photo Reveal Section -->
+<section class="photo-section hidden-blurred" id="photo-reveal">
+  <img src="./Images/Seal.png" alt="Memory Photo" />
+</section>
+
+
+      <h1 class="Title-About"> Chị biết ơn vì có em bên cạnh.</h1>
+  
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
