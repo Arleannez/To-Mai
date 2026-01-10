@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Photo Album</title>
+    <link rel="stylesheet" href="css/album.css" />
+  </head>
+  <body>
+    <h1 class="title">Our Photo Album</h1>
+    <h3 class="sub-title">
+      Hi Mai, this will be our photo album where we can keep our memories
+      together. Hehe 😊
+
+      I love you so much! ❤️
+    </h3>
+    <!-- Gallery -->
+    <div class="gallery">
+      <img src="images/book.jpg" onclick="openViewer(this)" />
+      <img src="images/Murphy.jpg" onclick="openViewer(this)" />
+      <img src="images/Pantalan Clouds.jpg" onclick="openViewer(this)" />
+      <img src="images/Park.jpg" onclick="openViewer(this)" />
+      <img
+        src="images/received_639935830554577.jpg"
+        onclick="openViewer(this)"
+      />
+      <img
+        src="images/received_930377074925336.jpg"
+        onclick="openViewer(this)"
+      />
+    </div>
+
+    <!-- Image Viewer -->
+    <div id="viewer" onclick="closeViewer()">
+      <span class="close">&times;</span>
+      <img id="viewerImg" />
+    </div>
+
+    <script src="js/album.js"></script>
+  </body>
+</html>
