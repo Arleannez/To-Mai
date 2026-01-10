@@ -1,0 +1,95 @@
+body {
+  background: #111;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.sub-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: normal;
+  color: #ccc;
+}
+
+/* Carousel Layout */
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.carousel {
+  width: 80%;
+  overflow: hidden;
+}
+
+.gallery {
+  column-count: 3;
+  column-gap: 15px;
+  transition: transform 0.6s ease;
+}
+
+/* Images */
+.gallery img {
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+}
+
+/* Navigation */
+.nav {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* Viewer */
+#viewer {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+#viewer img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .gallery {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    column-count: 1;
+  }
+}
